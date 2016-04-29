@@ -1,0 +1,77 @@
+EXPLAIN YOUR SOLUTION
+
+The Problem:
+Very soon, we'll have astronauts exploring underground environments on the Moon, Mars, and asteroids.  Radio communication will be blocked by obstacles such as cave walls, habitats, landscapes, and other line-of-sight issues.  This leads to lack of (or short range) communication, unknown health status for astronauts, and unable to respond to certain emergency situations.
+
+
+The Solution:
+FractalNet, consists of a wearable network of sensors that measure various parameters concerning an astronaut's health, the integrity and status of his/her spacesuit, and information about location and movements during an excursion on and beneath a planetary surface.  It includes the DataGlove, a Human Machine Interface (HMI) to communicate information to the wearer, and to other personnel and equipment participating in the operation
+
+The DataGlove provides an interface to the nodes, BaseStation, astronauts, robots, and everything else on the network.  If an astronaut trips and falls, a fellow astronaut will receive an alert based on the change in vitals.  The astronauts can then use voice, text, or text-to-speech to communicate and see if everyone is okay.
+
+The DataGlove can also be used for entertainment, such as piloting a quadcopter while the astronauts take a break in the mess hall.
+
+The communication system serves to connect all the devices in the network to one another, to carry data between applications running on the devices.  There are two primary types of nodes are in the network:  active devices and radio tags.  Active devices are nodes such as astronauts, robots and other equipment that produces and consumes data.  Radio tags participate in relaying data packets between nodes, to and from the active devices, but originate only a limited amount of data.
+
+The radio tag nodes can be deployed dynamically on FractalNet.  After commissioning the node via the DataGlove, the BaseStation will assign the node an address, establishing its place in the network.  Nodes are able to be used in several situations.  Nodes relay communication between other devices on the network.  They can also be used to log places of interest.  As an astronaut commissions a node, they use the DataGlove to record a voice or text message when they come across an interesting subject.  This voice, text, and position information is then sent back to the BaseStation and all other devices on the network.  When the astronaut moves out of range from the last node, an alert on the DataGlove will prompt the astronaut to commission a new node so that they will remain connected to the network.
+
+Telemetry and command data can also be transported over the network to and from non-human participants in the network, such as robots and equipment that is placed at various locations in a cave system.
+
+DataGlove features:
+Human Machine Interface to all devices on FractalNet
+Calculates distance using ultrasonic sensors
+Determines position in space using a six degree-of-freedom sensor
+Uses flexible resistors to determine finger manipulation
+Contains nRF24L01 radio to stream information
+Displays vital information on LCD screen
+Uses a text-to-speech module to deliver audio messages
+Heart rate and other health sensors
+
+BaseStation features:
+Logs and routes all traffic on FractalNet
+Displays health information from astronauts
+Monitors position tracking (GPS on Earth), weather, and seismic activity and will alert the crew of any emergencies
+Interfaces with DataGlove for gesture control
+
+Radio Tag node features:
+Relays communication
+Logs / transmits subjects of interest as determined by the astonaut
+Provides ongoing extended range communication
+Allows for tracking of astronauts and other devices on FractalNet
+
+Robot features:
+Allows for travel which would be dangerous for astronauts
+Can be remotely piloted by astronauts
+Able to lift heavy objects as well as perform drilling, etc.
+
+
+Other Applications for FractalNet:
+Current mine/cave systems on Earth
+Any place where line of sight communication is an issue
+Uses for temporary networks
+
+
+Future Development of our project:
+Create protocol for dynamic address assignment for nodes and other devices on network
+Relay communication between nodes and create mesh network
+Code button functionality for DataGlove
+Code ultrasonic distance feature for DataGlove
+Add driving abilities for Robot
+Develop more DataGloves
+Integrate smaller LCD screen/speaker for DataGlove
+
+
+Team:  Andrew Denio, Tony Vaughn, Joe Greene
+
+
+
+RESOURCES USED
+GitHub, Google, YouTube, and the various example codes provided by the Arduino community.
+
+Related Terrestrial Technologies
+http://www.tunnelradio.com/mining/ Tunnel Radio that uses "leaky feeders" to connect nodes around corners.
+http://www.iwtwireless.com/mining/communications-tracking/overview Wireless mesh used in mining.
+http://cavingnews.com/20130308-cave-radio-test-extends-range-to-one-mile Ham radios in caving.
+
+NJKL44's Power Glove Hack: http://www.instructables.com/id/Hacking-a-Powerglove/
+Biphenyl's Power Glove Hack: http://www.instructables.com/id/Power-Glove-20th-Anniversary-Edition/
